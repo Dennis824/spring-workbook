@@ -6,16 +6,21 @@
 </head>
 <body>
 <h2>Serials</h2>
-<table>
+<table border="solid" width="100">
     <tr>
         <th>Title</th>
         <th>Episode</th>
         <th>Rating</th>
     </tr>
-    <tr>
-        <th>Braking Bad</th>
-        <th>Ozymandias</th>
-        <th>10</th>
+    <tr th:object="${first}">
+        <td th:text="${first.title}"></td>
+        <td th:text="${first.episode}"></td>
+        <td th:text="${first.rating}"></td>
+    </tr>
+    <tr th:object="${second}">
+        <td th:text="${second.title}"></td>
+        <td th:text="${second.episode}"></td>
+        <td th:text="${second.rating}"></td>
     </tr>
 </table>
 </body>

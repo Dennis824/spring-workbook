@@ -3,39 +3,39 @@ package com.example.springworkbook.models;
 
 public class Serial {
 
-    private String Title;
+    public String title;
 
-    private String Episode;
+    public String episode;
 
-    private float Rating;
+    public double rating;
 
-    public Serial(String title, String episode, float rating) {
-        Title = title;
-        Episode = episode;
-        Rating = rating;
+    public Serial(String title, String episode, double rating) {
+        this.title = title;
+        this.episode = episode;
+        this.rating = rating;
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     public String getEpisode() {
-        return Episode;
+        return episode;
     }
 
     public void setEpisode(String episode) {
-        Episode = episode;
+        this.episode = episode;
     }
 
-    public float getRating() {
-        return Rating;
+    public double getRating() {
+        return rating;
     }
 
-    public void setRating(float rating) {
-        Rating = rating;
+    public void setRating(double rating) {
+        this.rating = rating;
     }
 }
