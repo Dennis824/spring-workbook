@@ -4,6 +4,18 @@
     <title>Workbook</title>
 </head>
 <body>
-<h1 th:text="'Speed: ' + ${speed}"></h1>
+<h1>Stuff</h1>
+<table>
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>role</th>
+    </tr>
+    <tr th:each="employee: ${employees}">
+    <td th:text="${employee.name}"></td>
+    <td th:text="${employee.age}"></td>
+    <td th:text="${employee.role}"></td>
+    </tr>
+</table>
 </body>
 </html>
