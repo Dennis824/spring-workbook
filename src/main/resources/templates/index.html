@@ -1,27 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
     <title>Workbook</title>
 </head>
 <body>
-<h2>Serials</h2>
-<table border="solid" width="100">
-    <tr>
-        <th>Title</th>
-        <th>Episode</th>
-        <th>Rating</th>
-    </tr>
-    <tr th:object="${first}">
-        <td th:text="${first.title}"></td>
-        <td th:text="${first.episode}"></td>
-        <td th:text="${first.rating}"></td>
-    </tr>
-    <tr th:object="${second}">
-        <td th:text="${second.title}"></td>
-        <td th:text="${second.episode}"></td>
-        <td th:text="${second.rating}"></td>
-    </tr>
-</table>
+<h1 th:text="'Speed: ' + ${speed}"></h1>
 </body>
 </html>
