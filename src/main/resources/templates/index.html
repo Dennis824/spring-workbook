@@ -16,7 +16,7 @@
     <td th:text="${record.item}"></td>
     <td th:text="${record.revenue}"></td>
     <td th:text="${record.cost}"></td>
-    <td th:text="${record.profit}"></td>
+    <td th:text="${record.revenue - record.cost}"></td>
 
     </tr>
 </table>
