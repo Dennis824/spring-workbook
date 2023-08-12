@@ -1,29 +1,30 @@
 package com.example.springworkbook.controllers;
 
-import com.example.springworkbook.models.Employee;
+import com.example.springworkbook.models.Record;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
+
 
 @Controller
 public class WorkbookController {
 
-    List<Employee> employees = Arrays.asList(
-            new Employee("Jim Halpert", 32, "Salesman"),
-            new Employee("Andy Bernard", 38, "Salesman"),
-            new Employee("Pam Beesly", 32, "Receptionist"),
-            new Employee("Michael Scott", 49, "Regional Manager"),
-            new Employee("Ryan Howard", 28, "Temp"),
-            new Employee("Angela Martin", 35, "Accountant"),
-            new Employee("Dwight Schrute", 37, "Assistant to the Regional Manager")
+
+    List<Record> records = Arrays.asList(
+            new Record("Chair", new BigDecimal("20.99"),  new BigDecimal("5.99")),
+            new Record("Table",  new BigDecimal("40.99"),  new BigDecimal("8.99")),
+            new Record("Couch",  new BigDecimal("100.99"),  new BigDecimal("105.99")),
+            new Record("Fridge",  new BigDecimal("200.99"),  new BigDecimal("59.99")),
+            new Record("Bed",  new BigDecimal("150.99"),  new BigDecimal("205.99"))
     );
 
     @GetMapping("/")
    public String getSign(Model model){
-        model.addAttribute("employees", employees);
+        model.addAttribute("records", records);
         return "index";
     }
 }
