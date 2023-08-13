@@ -29,7 +29,7 @@ public class StoreService {
 
     public Item getItemFromId(String id){
         int index = getIndexFromId(id);
-        return index == Constants.NOT_FOUND ? new Item() : getItem(index));
+        return index == Constants.NOT_FOUND ? new Item() : getItem(index);
 
     }
     public int getIndexFromId(String id) {
