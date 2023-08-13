@@ -1,10 +1,12 @@
 package com.example.springworkbook.repository;
 
 import com.example.springworkbook.models.Item;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class StoreRepository {
     private List<Item> items = new ArrayList<>();
 
