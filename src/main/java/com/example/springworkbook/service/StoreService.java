@@ -3,7 +3,6 @@ package com.example.springworkbook.service;
 import com.example.springworkbook.models.Constants;
 import com.example.springworkbook.models.Item;
 import com.example.springworkbook.repository.StoreRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
